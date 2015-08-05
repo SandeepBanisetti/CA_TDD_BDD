@@ -11,9 +11,9 @@ public class CucumberSteps extends TestCase {
 	RpnCalculator newtest = new RpnCalculator();
 	
 	String input;
+	 
 	
-	
-	@Given("^user enters \"([^\"]*)\"$")
+	@Given("^user enters \"([^\"]*)\"$") 
 	public void user_enters(String arg1) throws Throwable {
 	    // Express the Regexp above with the code you wish you had
 	    //throw new PendingException();
