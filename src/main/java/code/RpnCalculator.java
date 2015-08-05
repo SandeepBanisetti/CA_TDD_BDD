@@ -60,34 +60,34 @@ public class RpnCalculator {
          Float operand1; 
          Float output = (float) 0;
          
-         switch(token){
-         case "+":  operand1 = new_stack.pop();
+         switch(token.charAt(0)){
+         case '+':  operand1 = new_stack.pop();
       	          output = operand1+operand2;
                     new_stack.push(output);
                     break; 
-         case "-":  operand1 = new_stack.pop();
+         case '-':  operand1 = new_stack.pop();
       	          output = operand1-operand2;
                     new_stack.push(output);
                     break; 
-         case "*":  operand1 = new_stack.pop();
+         case '*':  operand1 = new_stack.pop();
       	          	output = operand1*operand2;
                     new_stack.push(output);
                     break; 
-         case "/":  
+         case '/':  
         	 		if(operand2 == 0)
         	 			return "error:divided by zero";
 	        		operand1 = new_stack.pop();
 	   	            output = operand1/operand2;
 	                new_stack.push(output);
                     break; 
-         case "^":  operand1 = new_stack.pop();
+         case '^':  operand1 = new_stack.pop();
       	          output= (float) Math.pow(operand1,operand2);
                     new_stack.push(output);
                     break;
-         case "%":  output = (float) (operand2/100.0);    
+         case '%':  output = (float) (operand2/100.0);    
                     new_stack.push(output);                                
                     break;
-        case "!": output = (float)  factorial(operand2);
+        case '!': output = (float)  factorial(operand2);
                     new_stack.push(output);                               
                     break;
                     
